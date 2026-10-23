@@ -85,4 +85,41 @@ async function sendText(to, body) {
 
 app.get("/", (req, res) => res.send("Blue Clima Bot po punon ✅"));
 
+// ---- Politika e privatësisë (për Meta) ----
+app.get("/privacy", (req, res) => {
+  res.type("html").send(`<!doctype html><html lang="sq"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy – Blue Clima Inc</title>
+<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:0 16px;line-height:1.6;color:#222}h1{color:#0a5bb5}h2{margin-top:28px}hr{margin:40px 0}</style>
+</head><body>
+<h1>Politika e Privatësisë – Blue Clima Inc</h1>
+<p><em>Përditësuar më: 23 tetor 2026</em></p>
+<p>Blue Clima Inc përdor WhatsApp Business për t'u përgjigjur pyetjeve të klientëve rreth kondicionerëve, ofertave, servisit dhe montimit.</p>
+<h2>Çfarë të dhënash mbledhim</h2>
+<p>Kur na shkruani në WhatsApp, marrim numrin tuaj të telefonit, emrin e profilit në WhatsApp dhe përmbajtjen e mesazheve që na dërgoni (p.sh. emër, adresë, model kondicioneri, përshkrim i problemit).</p>
+<h2>Si i përdorim</h2>
+<p>Vetëm për t'ju përgjigjur, për t'ju dërguar oferta që keni kërkuar dhe për të organizuar servisin ose montimin. Nuk i shesim dhe nuk ua japim të dhënat palëve të treta për marketing.</p>
+<h2>Ku ruhen</h2>
+<p>Mesazhet përpunohen përmes WhatsApp Business Platform (Meta) dhe serverit tonë. Ruhen vetëm për aq kohë sa duhet për t'ju shërbyer.</p>
+<h2>Të drejtat tuaja</h2>
+<p>Mund të kërkoni në çdo kohë të shihni, korrigjoni ose fshini të dhënat tuaja, ose të ndaloni komunikimin, duke na shkruar "STOP" në WhatsApp ose në email.</p>
+<h2>Kontakt</h2>
+<p>Blue Clima Inc · Pallati me Shigjeta<br>Email: blueclimainc@gmail.com · Tel: +355 69 544 2220<br>Web: www.blueclimainc.com</p>
+<hr>
+<h1>Privacy Policy – Blue Clima Inc</h1>
+<p><em>Last updated: October 23, 2026</em></p>
+<p>Blue Clima Inc uses WhatsApp Business to answer customer questions about air conditioners, offers, service and installation.</p>
+<h2>Data we collect</h2>
+<p>When you message us on WhatsApp we receive your phone number, WhatsApp profile name and the content of the messages you send (e.g. name, address, air conditioner model, description of the issue).</p>
+<h2>How we use it</h2>
+<p>Only to reply to you, send offers you requested and arrange service or installation. We do not sell your data or share it with third parties for marketing.</p>
+<h2>Storage</h2>
+<p>Messages are processed through the WhatsApp Business Platform (Meta) and our server, and kept only as long as needed to serve you.</p>
+<h2>Your rights</h2>
+<p>You may request access to, correction or deletion of your data, or stop communication at any time by sending "STOP" on WhatsApp or by email.</p>
+<h2>Contact</h2>
+<p>Blue Clima Inc · Pallati me Shigjeta, Albania<br>Email: blueclimainc@gmail.com · Phone: +355 69 544 2220<br>Web: www.blueclimainc.com</p>
+</body></html>`);
+});
+
 app.listen(PORT, () => console.log(`Serveri po punon në portin ${PORT}`));
